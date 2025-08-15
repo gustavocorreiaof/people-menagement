@@ -1,0 +1,172 @@
+.campo-texto {
+  margin: 2.4rem 0;
+  font-size: var(--font-size-l);
+}
+
+.campo-texto label {
+  display: block;
+  margin-bottom: var(--margin-xs);
+}
+
+.campo-texto__icone {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.campo-texto__container {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 1rem;
+  border: 1px solid #a6a7a9;
+}
+
+.campo-texto_icone_esquerda {
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.campo-texto_icone_esquerda .icon,
+.campo-texto__icone .icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.campo-texto__container input {
+  background-color: #fff;
+  box-shadow: 1.5rem 1.5rem 2rem rgba(0, 0, 0, 0.06);
+  border-radius: 1rem;
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+
+  padding: var(--padding-m) var(--padding-2xl);
+  font-size: var(--font-size-l);
+
+  height: 5.5rem;
+}
+
+.formulario form::-webkit-scrollbar {
+  width: 8px;
+  max-height: 1px;
+  size: 10px;
+  overflow: hidden;
+}
+
+.formulario form::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.formulario form::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  max-width: 40px;
+}
+
+/*Responsividade horizontal*/
+
+@media screen and (max-width: 1170px) and (min-width: 470px) {
+  .campo-texto__container input {
+    padding: 20px 60px;
+    font-size: 30px;
+  }
+
+  .campo-texto label {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 550px) and (min-width: 470px) {
+  .campo-texto {
+    margin: var(--margin-xs) 0;
+  }
+
+  .campo-texto label {
+    font-size: var(--font-size-m);
+  }
+}
+
+@media screen and (max-width: 470px) and (min-width: 430px) {
+  .campo-texto {
+    margin: var(--margin-xs) 0;
+  }
+  .campo-texto__container input {
+    padding: 20px 60px 20px 60px;
+    font-size: var(--font-size-m);
+  }
+
+  .campo-texto label {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 429px) and (min-width: 320px) {
+  .campo-texto__container input {
+    height: 3rem;
+  }
+}
+
+/*Responsividade vertical*/
+
+@media screen and (max-height: 1000px) and (min-height: 751px) {
+  .campo-texto__container input {
+    padding: var(--padding-s) 3.5rem var(--padding-s) 3.5rem;
+    font-size: var(--font-size-m);
+  }
+
+  .campo-texto label {
+    font-size: var(--font-size-m);
+  }
+
+  .campo-texto {
+    margin: var(--margin-s) 0;
+  }
+
+  .campo-texto_icone_esquerda .icon,
+  .campo-texto__icone .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@media screen and (max-height: 750px) and (min-height: 604px) {
+  .campo-texto__container input {
+    padding: 0 var(--padding-2xl);
+    font-size: var(--margin-m);
+    height: 3.5rem;
+  }
+
+  .campo-texto label {
+    font-size: var(--font-size-m);
+  }
+
+  .campo-texto {
+    margin: var(--margin-s) 0;
+  }
+}
+
+@media screen and (max-height: 603px) and (min-height: 0px) {
+  .campo-texto label {
+    font-size: var(--font-size-b);
+    margin-bottom: var(--margin-2xs);
+  }
+
+  .campo-texto__container input {
+    font-size: var(--font-size-b);
+    height: 1rem;
+  }
+
+  .campo-texto__icone {
+    right: 1.25rem;
+    transform: translateY(-50%);
+  }
+
+  .campo-texto {
+    margin: var(--margin-2xs) 0;
+  }
+}

@@ -1,0 +1,174 @@
+.cabecalho {
+  position: relative;
+  width: 100%;
+  height: var(--height-xl);
+  background: var(--backgroud-color);
+  color: #fff;
+
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-2xs);
+  min-width: 400px;
+}
+
+.right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: var(--margin-s);
+}
+
+.titleMinifyed {
+  display: none;
+}
+
+.logo img,
+.title img {
+  display: block;
+  width: auto;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-m);
+  font-weight: bold;
+  justify-content: space-between;
+  gap: var(--gap-xs);
+}
+
+.title .firstWord {
+  color: var(--primary-color);
+}
+
+.title .secondWord {
+  color: var(--second-color);
+}
+
+.cabecalho .icon:hover {
+  cursor: pointer;
+}
+
+.navBar {
+  display: flex;
+  gap: var(--gap-s);
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.navBar a {
+  position: relative;
+  font-size: var(--font-size-m);
+  color: var(--branco);
+  margin: 0 var(--margin-2xs);
+  text-decoration: none;
+}
+
+.navBar a::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  top: 100%;
+  height: 2px;
+  background: var(--second-color);
+  transition: 0.3s;
+}
+
+.navBar a.activeLeft::before {
+  left: 0;
+  right: auto;
+}
+
+.navBar a.activeRight::before {
+  left: auto;
+  right: 0;
+}
+
+.navBar a.active::before {
+  animation: leftToRight 0.3s ease forwards;
+}
+
+.navBar a.removing::before {
+  animation: rightToLeft 0.3s ease forwards;
+}
+
+.navBar a.removingFromRight::before {
+  left: auto;
+  right: 0;
+}
+
+.navBar a.removingFromLeft::before {
+  left: 0;
+  right: auto;
+}
+
+.btn-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.navBar.open {
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.navBar.open a {
+  width: 100%;
+  padding: 0.5rem 0;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+}
+
+@media (max-width: 768px) {
+  .btn-menu {
+    display: block;
+  }
+  .left {
+    display: none;
+  }
+  .title {
+    display: none;
+  }
+
+  .titleMinifyed {
+    display: block;
+  }
+
+  .right {
+    width: 5%;
+  }
+}
+
+@keyframes rightToLeft {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes leftToRight {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}

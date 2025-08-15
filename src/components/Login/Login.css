@@ -1,0 +1,208 @@
+.formulario {
+  display: flex;
+  justify-content: center;
+}
+
+.formulario form {
+  height: 65rem;
+  max-width: 80%;
+  background-color: #f2f2f2;
+  padding: var(--padding-xl);
+
+  border-radius: 2.1rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.08);
+  scrollbar-gutter: stable both-edges;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  overflow-y: scroll;
+}
+
+.formulario h1,
+h4 {
+  text-align: center;
+}
+
+.formulario h1 {
+  font-size: var(--font-size-l);
+}
+
+.formulario h4 {
+  font-size: var(--font-size-m);
+}
+
+form {
+  align-items: center;
+}
+
+.stefaniniLogo {
+  width: var(--img-size-l);
+  height: auto;
+  display: block;
+  margin: var(--margin-l) auto;
+  border-radius: 100px;
+}
+
+.btnAndAlert {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-m);
+}
+
+/*Responsividade horizontal*/
+
+@media screen and (max-width: 1170px) and (min-width: 650px) {
+  .stefaniniLogo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 5px auto;
+  }
+
+  .formulario h4 {
+    font-size: 24px !important;
+  }
+
+  .formulario form {
+    padding: 36px 30px;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 650px) and (min-width: 550px) {
+  .stefaniniLogo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .formulario form {
+    padding: 36px 30px;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 550px) and (min-width: 470px) {
+  .stefaniniLogo {
+    width: 75px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .formulario form {
+    padding: 36px 30px;
+    width: 80%;
+    height: 60%;
+  }
+}
+
+@media screen and (max-width: 470px) and (min-width: 412px) {
+  .stefaniniLogo {
+    width: 75px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .formulario form {
+    padding: 36px 30px;
+    width: 80%;
+    height: 60%;
+  }
+
+  .formulario h4 {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 412px) and (min-width: 320px) {
+  .stefaniniLogo {
+    width: 75px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .formulario form {
+    padding: var(--padding-xs);
+    width: 80%;
+  }
+
+  .formulario h1 {
+    font-size: var(--font-size-m);
+  }
+
+  .formulario h4 {
+    font-size: var(--font-size-);
+  }
+}
+
+/*Responsividade vertical*/
+
+@media screen and (max-height: 1000px) and (min-height: 750px) {
+  .stefaniniLogo {
+    width: 75px;
+  }
+
+  .formulario form {
+    height: 60%;
+  }
+
+  .formulario h4 {
+    font-size: var(--font-size-m);
+  }
+}
+
+@media screen and (max-height: 750px) and (min-height: 603px) {
+  .stefaniniLogo {
+    width: 75px;
+  }
+
+  .formulario form {
+    height: 60%;
+  }
+
+  .formulario h4 {
+    font-size: var(--font-size-b) !important;
+  }
+
+  .formulario h1 {
+    font-size: var(--font-size-m);
+    padding-top: var(--padding-xs);
+  }
+
+  .btnAndAlert {
+    gap: 0;
+  }
+}
+
+@media screen and (max-height: 602px) and (min-height: 0px) {
+  .stefaniniLogo {
+    width: 50px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .formulario form {
+    height: 60%;
+  }
+
+  .formulario h4 {
+    font-size: var(--font-size-mobile-l);
+  }
+
+  .formulario h1 {
+    font-size: var(--font-size-s);
+    padding-top: var(--padding-xs);
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  box-shadow: 0 0 0px 1000px #fff inset;
+}
