@@ -1,0 +1,56 @@
+.filter-form {
+  display: flex;
+  flex-wrap: nowrap; /* tudo em uma linha */
+  gap: 10px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  overflow-x: auto; /* rolagem horizontal se não couber */
+  align-items: center;
+}
+
+.filter-form input,
+.filter-form select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 140px; /* largura mínima */
+}
+
+.filter-form button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #565e64;
+}
+
+/* escondendo barra de rolagem no Chrome */
+.filter-form::-webkit-scrollbar {
+  height: 6px;
+}
+.filter-form::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 6px;
+}

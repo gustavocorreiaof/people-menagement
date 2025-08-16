@@ -1,0 +1,56 @@
+.people-grid-container {
+  overflow-x: auto;
+  margin-top: 20px;
+  color: var(--branco);
+}
+
+.people-grid {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.people-grid th,
+.people-grid td {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 14px;
+  text-align: center;
+}
+
+.people-grid th {
+  background-color: var(--gray);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.people-grid tr:nth-child(even) {
+  background-color: var(--branco);
+}
+
+.btn-edit {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-edit:hover {
+  background-color: #45a049;
+}
+
+.btn-delete {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-delete:hover {
+  background-color: #da190b;
+}
