@@ -23,20 +23,16 @@ const Login = () => {
       const cpfSemCaracteres = cpf.replace(/[^0-9]/g, "");
 
       const response = await axios.post(
-        "https://localhost:7102/api/Authenticacoes/login",
+        "https://localhost:7174/api/v1.0/Auth",
         {
-          cpf: cpfSemCaracteres,
-          senha: senha,
+          Cpf: cpfSemCaracteres,
+          Password: senha,
         }
       );
 
       if (response.status === 200) {
-        localStorage.setItem("token", response.data.token);
-
-        console.log(response.data);
-
-        if (response.data.isAdmin) navigate("/paginaAdmin");
-        else navigate("/paginaInicial");
+        localStorage.setItem("token", response.data.accessToken);
+        navigate("/PaginaInicial");
       }
     } catch (error) {
       if (error.response) {
@@ -87,10 +83,10 @@ const Login = () => {
         <form onSubmit={efetuarLogin}>
           <img
             className="stefaniniLogo"
-            src={"https://i.imgur.com/tj1xzXn.png"}
+            src={"https://i.imgur.com/F6d8nRp.png"}
           ></img>
 
-          <h1>Encontros Universitários 2025</h1>
+          <h1>Gerenciamento de Pessoas</h1>
           <h4>Acesse sua conta para continuar</h4>
 
           <div className="inputs-login">

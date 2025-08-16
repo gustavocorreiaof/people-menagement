@@ -7,6 +7,7 @@ const LayoutComCabecalho = ({ children }) => {
   return (
     <>
       <Cabecalho setOpenMenu={setOpenMenu} />
+      <hr />
       <main>{children}</main>
       <ModalMenu openMenu={openMenu} setOpenMenu={setOpenMenu}></ModalMenu>
     </>

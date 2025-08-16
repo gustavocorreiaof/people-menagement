@@ -10,9 +10,8 @@ const Cabecalho = ({ setOpenMenu }) => {
   const location = useLocation();
 
   const routes = [
-    { page: "Palestras", path: "/paginaAdmin", value: 0 },
+    { page: "Palestras", path: "/PaginaInicial", value: 0 },
     { page: "Sobre", path: "/sobre", value: 1 },
-    { page: "Configurações", path: "/configuracoes", value: 2 },
   ];
 
   useEffect(() => {
@@ -73,29 +72,29 @@ const Cabecalho = ({ setOpenMenu }) => {
         <div className="logo">
           <img
             className="logo"
-            src={"https://i.imgur.com/tj1xzXn.png"}
+            src={"https://i.imgur.com/F6d8nRp.png"}
             alt="Logo"
           />
         </div>
 
         <div className="title">
-          <span className="firstWord">Encontros </span>{" "}
-          <span className="secondWord">Universitários</span>
+          <span className="firstWord">Ferreira </span>{" "}
+          <span className="secondWord">Costa</span>
         </div>
       </div>
       <div className="titleMinifyed">
-        <span>SIs</span>
-        <span style={{ color: "var(--second-color)" }}>EUs</span>
+        <span>F</span>
+        <span style={{ color: "var(--second-color)" }}>C</span>
       </div>
       <div className="left">
         <nav className="navBar">
           <NavLink
-            to="/paginaAdmin"
+            to="/PaginaInicial"
             className={({ isActive }) => (isActive ? "active" : "")}
             end
-            onClick={(e) => handleNavLinkClick(e, "/paginaAdmin")}
+            onClick={(e) => handleNavLinkClick(e, "/PaginaInicial")}
           >
-            Palestras
+            Home
           </NavLink>
           <NavLink
             to="/sobre"
