@@ -12,7 +12,7 @@ function App() {
       element: React.createElement(Login),
     }),
     React.createElement(Route, {
-      path: "/paginaAdmin",
+      path: "/PaginaInicial",
       element: React.createElement(PaginaInicial),
     })
   );
